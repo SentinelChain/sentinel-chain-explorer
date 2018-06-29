@@ -1,0 +1,56 @@
+extends layout
+
+block content
+  h3 BridgeInfo
+  table.table.bridgetb
+    tbody
+      tr
+        td Balance Diff
+        td #{bridgeInfo.balanceDiff}
+      tr
+        td Last Checked
+        td #{moment.unix(bridgeInfo.lastChecked).format()}
+      tr
+        td Deposits Diff
+        td #{bridgeInfo.depositsDiff}
+      tr
+        td Withdrawal Diff
+        td #{bridgeInfo.withdrawalDiff}
+      tr
+        td Required Signatures Match
+        td #{bridgeInfo.requiredSignaturesMatch}
+      tr
+        td Time Diff
+        td #{bridgeInfo.timeDiff}
+
+  h3 Home
+  table.table.bridgetb
+    tbody
+      tr
+        td Balance
+        td #{bridgeInfo.home.balance}
+      tr
+        td Deposits
+        td #{bridgeInfo.home.deposits}
+      tr
+        td Withdrawals
+        td #{bridgeInfo.home.withdrawals}
+      tr
+        td Required Signatures
+        td #{bridgeInfo.home.requiredSignatures}
+
+  h3 Foreign
+  table.table.bridgetb
+    tbody
+      tr
+        td Total Supply
+        td #{bridgeInfo.foreign.totalSupply}
+      tr
+        td Deposits
+        td #{bridgeInfo.foreign.deposits}
+      tr
+        td Withdrawals
+        td #{bridgeInfo.foreign.withdrawals}
+      tr
+        td Required Signatures
+        td #{bridgeInfo.foreign.requiredSignatures}

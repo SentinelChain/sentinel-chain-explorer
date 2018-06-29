@@ -19,7 +19,7 @@ router.get('/:account', function(req, res, next) {
       if (web3.isAddress(req.params.account)) {
         callback();
       } else {
-        callback(new Error("The input address is not a valid address!!!"))
+        callback(new Error('The input address is not a valid address!!!'));
       }
     },
     function(callback) {

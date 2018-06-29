@@ -3,6 +3,10 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
+table.bridgetb tr td {
+  width: 50%;
+}
+
 a {
   color: #00B7FF;
 }
