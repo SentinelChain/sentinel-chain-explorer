@@ -18,7 +18,6 @@ router.get('/:bridgeInfo?', (req, res) => {
             callback(new Error(`ERROR: ${res.statusCode}`));
           }
         }
-        console.log(bridgeInfo);
       });
     },
     function (bridgeInfo) {
