@@ -7,7 +7,7 @@ var async = require('async');
 router.get('/:bridgeInfo?', (req, res) => {
   async.waterfall([
     function (callback) {
-      var url = 'http://monitor.thesentinelchain.com/';
+      var url = 'http://localhost:3005';
       request.get(url, {json: true}, (err, res, bridgeInfo) => {
         if (err) {
           callback(new Error("ERROR: Cannot retrieve bridge data!!!"));
