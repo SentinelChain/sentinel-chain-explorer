@@ -2,13 +2,13 @@ extends layout
 
 block content
   #home.container
-    h2 Verify Ethereum signatures
+    h2 Verify Sentinel signatures
     .row
       .col-md-12
         form(action="/signature/verify", method="post")
           .form-group
-            label(for="ethereumAddress") Ethereum Address
-            input.form-control#ethereumAddress(type="text", placeholder="0x...", name="ethereumAddress", value=ethereumAddress)
+            label(for="sentinelAddress") Sentinel Address
+            input.form-control#sentinelAddress(type="text", placeholder="0x...", name="sentinelAddress", value=sentinelAddress)
           .form-group
             label(for="message") Message
             input.form-control#message(type="text", placeholder="Bacon ipsum dolor amet", name="message", value=message)
