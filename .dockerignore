@@ -1,0 +1,11 @@
+/utils/solc-bin/.git
+/node_modules
+.dockerignore
+.git
+.gitignore
+.gitmodiles
+config.js.example
+docker-compose.yml
+Dockerfile
+LICENSE
+README.md
