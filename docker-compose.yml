@@ -1,8 +1,6 @@
-version: '2.0'
-
+version: '3'
 services:
   sentinel-chain-explorer:
     build: .
-    restart: always
     ports:
       - 3000:3000
