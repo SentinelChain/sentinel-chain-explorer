@@ -1,6 +1,6 @@
 FROM node:8-alpine
 
-WORKDIR /sentinel-explorer
+WORKDIR /sentinel
 
 RUN apk add --no-cache \
     build-base \
