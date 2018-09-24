@@ -1,0 +1,12 @@
+#!/bin/sh
+
+set -e
+
+# Set default values for ENV's variables
+export IPC_PATH=${IPC_PATH:-'/sentinel/base-path/jsonrpc.ipc'}
+export BOOTSTRAP_URL=${BOOTSTRAP_URL:-'https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/paper/bootstrap.min.css'}
+
+# Process config files
+envsubst '${IPC_PATH} ${BOOTSTRAP_URL}' < /sentinel/config.docker.js > /sentinel/config.js
+
+npm start

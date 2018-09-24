@@ -5,6 +5,7 @@
 .gitignore
 .gitmodiles
 config.js.example
+config.js
 docker-compose.yml
 Dockerfile
 LICENSE
