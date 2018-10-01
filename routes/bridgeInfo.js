@@ -1,13 +1,15 @@
+require('dotenv').config({
+  path: __dirname + '/../.env'
+});
 var express = require('express');
 var router = express.Router();
 var request = require('request');
-
 var async = require('async');
 
 router.get('/:bridgeInfo?', (req, res) => {
   async.waterfall([
     function (callback) {
-      var url = 'http://localhost:3005';
+      var url = process.env.BRIDGE_MONITOR_URL;
       request.get(url, {json: true}, (err, res, bridgeInfo) => {
         if (err) {
           callback(new Error("ERROR: Cannot retrieve bridge data!!!"));

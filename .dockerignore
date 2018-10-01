@@ -4,6 +4,8 @@
 .git
 .gitignore
 .gitmodiles
+.env
+.env-example
 config.js.example
 config.js
 docker-compose.yml
