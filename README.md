@@ -21,26 +21,19 @@ Sentinel Chain Explorer is a Sentinel blockchain explorer built with NodeJS, Exp
 * Supports IPC and HTTP backend connections
 * Responsive layout
 
-## Planned features
-* ERC20 Token support
-
-Missing a feature? Please request it by creating a new [Issue](https://github.com/gobitfly/etherchain-light/issues).
-
 ## Usage notes
-This blockchain explorer is intended for private Sentinel chains. As it does not have a dedicated database all data will be retrived on demand from a backend Parity node. Some of those calls are ressource intensive (e.g. retrieval of the full tx list of an account) and do not scale well for acounts with a huge number of transactions. We currently develop the explorer using the Kovan testnet but it will work with every Parity compatible Ethereum network configuration. The explorer is still under heavy development, if you find any problems please create an issue or prepare a pull request.
+This blockchain explorer is intended for private Sentinel chain. As it does not have a dedicated database all data will be retrived on demand from a backend Parity node. Some of those calls are ressource intensive (e.g. retrieval of the full tx list of an account) and do not scale well for acounts with a huge number of transactions. We currently develop the explorer using the Kovan testnet but it will work with every Parity compatible Ethereum network configuration. The explorer is still under heavy development, if you find any problems please create an issue or prepare a pull request.
 
 ## Getting started
 
 ### Setup from source
 
-Supported OS: Ubuntu 16.04
+Supported OS: Ubuntu 16.04 and +
 
 Supported Sentinel backend nodes: Parity (Geth is currently not supported as it does not allow account and received/sent tx enumeration)
 
 1. Setup a nodejs & npm environment
-2. Install the latest version of the Parity Sentinel client
-3. Start parity using the following options: `parity --chain=<yourchain> --tracing=on --fat-db=on --pruning=archive`
-4. Clone this repository to your local machine: `git clone https://github.com/InfoCorp-Technologies/sentinel-chain-explorer --recursive` (Make sure to include `--recursive` in order to fetch the solc-bin git submodule)
+4. Clone this repository to your local machine: `git clone https://github.com/SentinelChain/sentinel-chain-explorer.git --recursive` (Make sure to include `--recursive` in order to fetch the solc-bin git submodule)
 5. Install all dependencies: `npm install`
 6. Rename `config.js.example` into `config.js` and adjust the file to your local environment
 7. Start the explorer: `npm start`
